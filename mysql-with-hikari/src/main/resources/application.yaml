@@ -1,0 +1,55 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: <root>
+    password: <password>
+    url: jdbc:mysql://<host:port>
+    type: com.zaxxer.hikari.HikariDataSource
+    hikari:
+      connectionTimeout: 50000
+      maxLifetime: 900000
+      poolName: "db-pool"
+      idleTimeout: 300000
+      maximumPoolSize: 10
+      minimumIdle: 5
+      connection-test-query: "select 1 from dual"
+      data-source-properties:
+        maintainTimeStats: false
+        useServerPrepStmts: true
+        cacheResultSetMetadata: true
+        cacheServerConfiguration: true
+        cachePrepStmts: true
+        rewriteBatchedStatements: true
+        prepStmtCacheSqlLimit: 2048
+        elideSetAutoCommits: true
+        useLocalSessionState: true
+        prepStmtCacheSize: 250
+      maximum-pool-size: 10
+  jpa:
+    show-sql: true
+    database: mysql
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        generate_statistics: true
+        format_sql: true
+        search:
+          autoregister_listeners: false
+        bytecode:
+          use_reflection_optimizer: false
+        use_sql: true
+        id:
+          new_generator_mappings: false
+        show_sql: true
+
+logging:
+  level:
+    com.zaxxer.hikari.HikariConfig: DEBUG
+    com.zaxxer.hikari: TRACE
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
