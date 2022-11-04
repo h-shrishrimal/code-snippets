@@ -1,6 +1,7 @@
 package dev.example;
 
 import dev.example.entities.User;
+import dev.example.entities.UserDetail;
 import dev.example.repo.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -18,10 +19,9 @@ public class Application implements CommandLineRunner {
 
   @Override
   public void run(String... args) throws Exception {
-    System.out.println("Inserting Users");
-    userRepo.save(new User("a1@b.com"));
-    userRepo.save(new User("a2@b.com"));
-    userRepo.save(new User("a3@b.com"));
-    userRepo.save(new User("a4@b.com"));
+    userRepo.save(new User("a1@b.com",new UserDetail("1234","Mumbai")));
+    userRepo.save(new User("a2@b.com",new UserDetail("1234","Mumbai")));
+    userRepo.save(new User("a3@b.com",new UserDetail("1234","Mumbai")));
+    userRepo.save(new User("a4@b.com",new UserDetail("1234","Mumbai")));
   }
 }
