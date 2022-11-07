@@ -1,11 +1,11 @@
 package dev.example.service;
 
-import dev.example.entities.User;
 import dev.example.repo.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
+import java.io.Serializable;
+import java.util.Map;
 
 @Service
 public class UserService {
@@ -16,7 +16,9 @@ public class UserService {
     this.userRepo = userRepo;
   }
 
-  public List<User> getAllUsers() {
-     return userRepo.findAll();
+  public Map<String, ? extends Serializable> empDetails(Long empId) {
+    if (userRepo.findById(empId).isPresent())
+      return Map.of("employeeId", empId, "isMLTEligible", true);
+    return Map.of("employeeId", empId, "isMLTEligible", false);
   }
 }
