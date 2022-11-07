@@ -1,6 +1,6 @@
-package dev.example.service;
+package com.tcs.iaspire.service;
 
-import dev.example.repo.UserRepository;
+import com.tcs.iaspire.repo.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

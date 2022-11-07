@@ -1,4 +1,4 @@
-package dev.example.entities;
+package com.tcs.iaspire.entities;
 
 import com.vladmihalcea.hibernate.type.json.JsonBinaryType;
 import org.hibernate.annotations.Type;

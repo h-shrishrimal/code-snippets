@@ -1,9 +1,7 @@
-package dev.example;
+package com.tcs.iaspire;
 
-import dev.example.entities.User;
-import dev.example.entities.UserDetail;
-import dev.example.entities.UserInformation;
-import dev.example.repo.UserRepository;
+import com.tcs.iaspire.entities.UserInformation;
+import com.tcs.iaspire.repo.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;

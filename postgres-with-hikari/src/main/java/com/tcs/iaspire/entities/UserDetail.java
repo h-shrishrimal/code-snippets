@@ -1,4 +1,4 @@
-package dev.example.entities;
+package com.tcs.iaspire.entities;
 
 import java.io.Serializable;
 

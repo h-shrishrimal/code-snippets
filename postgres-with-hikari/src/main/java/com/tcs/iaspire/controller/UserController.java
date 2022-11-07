@@ -1,6 +1,6 @@
-package dev.example.controller;
+package com.tcs.iaspire.controller;
 
-import dev.example.service.UserService;
+import com.tcs.iaspire.service.UserService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;

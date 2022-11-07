@@ -1,7 +1,6 @@
-package dev.example.repo;
+package com.tcs.iaspire.repo;
 
-import dev.example.entities.User;
-import dev.example.entities.UserInformation;
+import com.tcs.iaspire.entities.UserInformation;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
