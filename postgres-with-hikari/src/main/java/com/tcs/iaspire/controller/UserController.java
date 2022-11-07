@@ -17,7 +17,7 @@ public class UserController {
     this.userService = userService;
   }
 
-  @GetMapping(path = "/iaspire/empDetails/{empId}")
+  @GetMapping(path = "/iaspire/empdetails/{empId}")
   public Map<String, ? extends Serializable> details(@PathVariable Long empId) {
     return userService.empDetails(empId);
   }
