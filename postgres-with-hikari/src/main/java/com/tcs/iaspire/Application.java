@@ -18,6 +18,6 @@ public class Application implements CommandLineRunner {
 
   @Override
   public void run(String... args) throws Exception {
-    userRepo.save(new UserInformation(121544l));
+
   }
 }
