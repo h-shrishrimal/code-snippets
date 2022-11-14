@@ -7,8 +7,8 @@ import javax.persistence.*;
 public class RequirementIAspire {
 
 
-  @Id @Column(name ="requirement_id") private Integer requirementId;
-  @Column(name ="request_id") private Integer requestId;
+  @Id  @Column(name ="requirement_id") private String requirementId;
+       @Column(name ="request_id") private Integer requestId;
   @Lob @Column(name ="requirement_status") private String requirementStatus;
   @Lob @Column(name ="requirement_type") private String requirementType;
   @Lob @Column(name ="onsite_offshore") private String onsiteOffshore;
@@ -19,27 +19,40 @@ public class RequirementIAspire {
   @Lob @Column(name ="bucket_wrt_rqmt_st_dt") private String bucketWrtRqmtStDt;
   @Lob @Column(name ="require_status_requirement_start_date") private String requireStatusRequirementStartDate;
   @Lob @Column(name ="won_swon") private String wonSwon;
-  @Lob @Column(name ="project_number") private String projectNumber;
+  @Lob @Column(name ="sp") private String sp;
+  @Lob @Column(name ="sub_sp") private String subSp;
   @Lob @Column(name ="parent_du") private String parentDu;
   @Lob @Column(name ="du_type") private String duType;
+  @Lob @Column(name ="project_number") private String projectNumber;
   @Lob @Column(name ="group_customer_name") private String groupCustomerName;
-  @Lob @Column(name ="customer_name") private String customerName;
   @Lob @Column(name ="bfsi_account_name") private String bfsiAccountName;
   @Lob @Column(name ="bfsi_sub_segment_name") private String bfsiSubSegmentName;
   @Lob @Column(name ="new_segment_iou_name") private String newSegmentIouName;
   @Lob @Column(name ="requirement_bg_cluster") private String requirementBgCluster;
   @Lob @Column(name ="requirement_parent_iou") private String requirementParentIou;
+  @Lob @Column(name ="requirement_child_iou") private String requirementChildIou;
+  @Lob @Column(name ="horizontial_bg_cluster") private String horizontialBgCluster;
+  @Lob @Column(name ="type_of_accounts") private String typeOfAccounts;
   @Lob @Column(name ="horizontal_parent_iou") private String horizontalParentIou;
   @Lob @Column(name ="horizontal_child_iou") private String horizontalChildIou;
   @Lob @Column(name ="requirement_geography") private String requirementGeography;
   @Lob @Column(name ="requirement_country") private String requirementCountry;
   @Lob @Column(name ="requirement_branch") private String requirementBranch;
-  @Lob @Column(name ="requirement_city") private String requirementCity;
-  @Lob @Column(name ="requirement_location") private String requirementLocation;
-  @Lob @Column(name ="rmg_offshore_branch") private String rmgOffshoreBranch;
-  @Lob @Column(name ="branch") private String branch;
+  @Lob @Column(name ="realization") private String realization;
+  @Lob @Column(name ="source_of_staffing") private String sourceOfStaffing;
   @Lob @Column(name ="total_experience") private String totalExperience;
   @Lob @Column(name ="primary_competency_proficiency_details") private String primaryCompetencyProficiencyDetails;
+  @Lob @Column(name ="microskill_proficiency_dtls_1") private String microskillProficiencyDtls1;
+  @Lob @Column(name ="microskill_proficiency_dtls_2") private String microskillProficiencyDtls2;
+  @Lob @Column(name ="requirement_role") private String requirementRole;
+
+  public String getRequirementId() {
+    return requirementId;
+  }
+
+  public void setRequirementId(String requirementId) {
+    this.requirementId = requirementId;
+  }
 
   public Integer getRequestId() {
     return requestId;
@@ -47,14 +60,6 @@ public class RequirementIAspire {
 
   public void setRequestId(Integer requestId) {
     this.requestId = requestId;
-  }
-
-  public Integer getRequirementId() {
-    return requirementId;
-  }
-
-  public void setRequirementId(Integer requirementId) {
-    this.requirementId = requirementId;
   }
 
   public String getRequirementStatus() {
@@ -137,12 +142,20 @@ public class RequirementIAspire {
     this.wonSwon = wonSwon;
   }
 
-  public String getProjectNumber() {
-    return projectNumber;
+  public String getSp() {
+    return sp;
   }
 
-  public void setProjectNumber(String projectNumber) {
-    this.projectNumber = projectNumber;
+  public void setSp(String sp) {
+    this.sp = sp;
+  }
+
+  public String getSubSp() {
+    return subSp;
+  }
+
+  public void setSubSp(String subSp) {
+    this.subSp = subSp;
   }
 
   public String getParentDu() {
@@ -161,20 +174,20 @@ public class RequirementIAspire {
     this.duType = duType;
   }
 
+  public String getProjectNumber() {
+    return projectNumber;
+  }
+
+  public void setProjectNumber(String projectNumber) {
+    this.projectNumber = projectNumber;
+  }
+
   public String getGroupCustomerName() {
     return groupCustomerName;
   }
 
   public void setGroupCustomerName(String groupCustomerName) {
     this.groupCustomerName = groupCustomerName;
-  }
-
-  public String getCustomerName() {
-    return customerName;
-  }
-
-  public void setCustomerName(String customerName) {
-    this.customerName = customerName;
   }
 
   public String getBfsiAccountName() {
@@ -217,6 +230,30 @@ public class RequirementIAspire {
     this.requirementParentIou = requirementParentIou;
   }
 
+  public String getRequirementChildIou() {
+    return requirementChildIou;
+  }
+
+  public void setRequirementChildIou(String requirementChildIou) {
+    this.requirementChildIou = requirementChildIou;
+  }
+
+  public String getHorizontialBgCluster() {
+    return horizontialBgCluster;
+  }
+
+  public void setHorizontialBgCluster(String horizontialBgCluster) {
+    this.horizontialBgCluster = horizontialBgCluster;
+  }
+
+  public String getTypeOfAccounts() {
+    return typeOfAccounts;
+  }
+
+  public void setTypeOfAccounts(String typeOfAccounts) {
+    this.typeOfAccounts = typeOfAccounts;
+  }
+
   public String getHorizontalParentIou() {
     return horizontalParentIou;
   }
@@ -257,36 +294,20 @@ public class RequirementIAspire {
     this.requirementBranch = requirementBranch;
   }
 
-  public String getRequirementCity() {
-    return requirementCity;
+  public String getRealization() {
+    return realization;
   }
 
-  public void setRequirementCity(String requirementCity) {
-    this.requirementCity = requirementCity;
+  public void setRealization(String realization) {
+    this.realization = realization;
   }
 
-  public String getRequirementLocation() {
-    return requirementLocation;
+  public String getSourceOfStaffing() {
+    return sourceOfStaffing;
   }
 
-  public void setRequirementLocation(String requirementLocation) {
-    this.requirementLocation = requirementLocation;
-  }
-
-  public String getRmgOffshoreBranch() {
-    return rmgOffshoreBranch;
-  }
-
-  public void setRmgOffshoreBranch(String rmgOffshoreBranch) {
-    this.rmgOffshoreBranch = rmgOffshoreBranch;
-  }
-
-  public String getBranch() {
-    return branch;
-  }
-
-  public void setBranch(String branch) {
-    this.branch = branch;
+  public void setSourceOfStaffing(String sourceOfStaffing) {
+    this.sourceOfStaffing = sourceOfStaffing;
   }
 
   public String getTotalExperience() {
@@ -303,5 +324,29 @@ public class RequirementIAspire {
 
   public void setPrimaryCompetencyProficiencyDetails(String primaryCompetencyProficiencyDetails) {
     this.primaryCompetencyProficiencyDetails = primaryCompetencyProficiencyDetails;
+  }
+
+  public String getMicroskillProficiencyDtls1() {
+    return microskillProficiencyDtls1;
+  }
+
+  public void setMicroskillProficiencyDtls1(String microskillProficiencyDtls1) {
+    this.microskillProficiencyDtls1 = microskillProficiencyDtls1;
+  }
+
+  public String getMicroskillProficiencyDtls2() {
+    return microskillProficiencyDtls2;
+  }
+
+  public void setMicroskillProficiencyDtls2(String microskillProficiencyDtls2) {
+    this.microskillProficiencyDtls2 = microskillProficiencyDtls2;
+  }
+
+  public String getRequirementRole() {
+    return requirementRole;
+  }
+
+  public void setRequirementRole(String requirementRole) {
+    this.requirementRole = requirementRole;
   }
 }

@@ -12,6 +12,7 @@ public class EmployeeHeadCount {
   @Id @Column(name ="employee_id") private Integer employeeId;
   @Column(name ="mlt_pool") private String mltPool;
   @Column(name ="ani_pool") private String aniPool;
+  @Column(name ="status") private String status;
   @Column(name ="employee_name") private String employeeName;
   @Column(name ="project_name") private String projectName;
   @Column(name ="date_of_joining") private String dateOfJoining;
@@ -90,7 +91,6 @@ public class EmployeeHeadCount {
   @Column(name ="email_id") private String emailId;
   @Column(name ="span_of_control_total") private String spanOfControlTotal;
 
-
   public Integer getEmployeeId() {
     return employeeId;
   }
@@ -113,6 +113,14 @@ public class EmployeeHeadCount {
 
   public void setAniPool(String aniPool) {
     this.aniPool = aniPool;
+  }
+
+  public String getStatus() {
+    return status;
+  }
+
+  public void setStatus(String status) {
+    this.status = status;
   }
 
   public String getEmployeeName() {

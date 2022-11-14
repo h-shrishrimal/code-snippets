@@ -3,6 +3,7 @@ package com.tcs.rmg.controllers;
 import com.tcs.rmg.common.AppConstant;
 import com.tcs.rmg.data.TotalRequirementDataResponse;
 import com.tcs.rmg.data.TotalRequirementDetails;
+import com.tcs.rmg.entities.EmployeeHeadCount;
 import com.tcs.rmg.exception.RmgAppException;
 import com.tcs.rmg.service.impl.AspireService;
 import com.tcs.rmg.service.impl.UserServiceImpl;
@@ -42,4 +43,28 @@ public class AspireController {
       throw new RmgAppException("getTotalRequirementDetails", AppConstant.ERROR_CODE_501);
     }
   }
+
+  @RequestMapping(value="/getEmployeeDetails/{employeeId}", method= RequestMethod.GET)
+  public ResponseEntity<EmployeeHeadCount> getEmployeeDetails(@PathVariable Long employeeId)throws RmgAppException {
+    try {
+      logger.info("Inside getEmployeeDetails--");
+      return ResponseEntity.ok(aspireService.geEmployeeDetails(employeeId));
+    }catch(Exception e) {
+      logger.error("getEmployeeDetails"+e);
+      throw new RmgAppException("getEmployeeDetails", AppConstant.ERROR_CODE_501);
+    }
+  }
+
+  @RequestMapping(value="/applyfor/employeeid/{employeeId}/requirementid/{requirementId}", method= RequestMethod.POST)
+  public ResponseEntity<?> applyFor(@PathVariable Long employeeId, @PathVariable Long requirementId)throws RmgAppException {
+    try {
+      logger.info("Inside getEmployeeDetails--");
+      return ResponseEntity.ok(aspireService.applyFor(employeeId,requirementId));
+    }catch(Exception e) {
+      logger.error("getEmployeeDetails"+e);
+      throw new RmgAppException("getEmployeeDetails", AppConstant.ERROR_CODE_501);
+    }
+  }
+
+
 }
