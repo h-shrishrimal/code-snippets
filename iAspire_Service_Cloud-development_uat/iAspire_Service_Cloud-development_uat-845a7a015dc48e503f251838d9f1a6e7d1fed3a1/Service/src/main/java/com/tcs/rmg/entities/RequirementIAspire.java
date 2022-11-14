@@ -45,6 +45,15 @@ public class RequirementIAspire {
   @Lob @Column(name ="microskill_proficiency_dtls_1") private String microskillProficiencyDtls1;
   @Lob @Column(name ="microskill_proficiency_dtls_2") private String microskillProficiencyDtls2;
   @Lob @Column(name ="requirement_role") private String requirementRole;
+  @Lob @Column(name = "project_type") private String projectType;
+
+  public String getProjectType() {
+    return projectType;
+  }
+
+  public void setProjectType(String projectType) {
+    this.projectType = projectType;
+  }
 
   public String getRequirementId() {
     return requirementId;

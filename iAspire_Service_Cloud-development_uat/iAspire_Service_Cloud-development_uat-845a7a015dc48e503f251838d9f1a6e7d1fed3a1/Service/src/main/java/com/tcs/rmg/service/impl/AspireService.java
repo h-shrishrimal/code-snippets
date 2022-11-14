@@ -244,7 +244,7 @@ public class AspireService {
               rdi.requirement_child_iou as "requirementChildIou",
               rdi.requirement_country as "country",
               rdi.requirement_end_date as "requirementEndDate",
-              rdi.requirement_geography as "requirementGeography",
+              rdi.requirement_geography as "geography",
               rdi.requirement_parent_iou as "requirementParentIou",
               rdi.requirement_pending_with as "requirementPendingWith",
               rdi.requirement_start_date as "postedOn",
@@ -257,7 +257,7 @@ public class AspireService {
               rdi.type_of_accounts as "typeOfAccounts",
               rdi.won_swon as "wonSwon",
               rdi.project_type as "projectType",
-              rdi.requirement_bg__cluster as "requirementBgCluster",
+              rdi.requirement_bg_cluster as "requirementBgCluster",
               rdi.horizontal_bg_cluster as "horizontalBgCluster",
               rdi.requirement_role as "role"
 
