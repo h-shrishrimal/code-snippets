@@ -96,6 +96,8 @@
       <groupId>me.xdrop</groupId>
       <artifactId>fuzzywuzzy</artifactId>
       <version>1.4.0</version>
+      <scope>system</scope>
+      <systemPath>${basedir}/fuzzywuzzy-1.4.0.jar</systemPath>
     </dependency>
 	 	<dependency>
             <groupId>com.querydsl</groupId>
